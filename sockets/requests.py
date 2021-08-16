@@ -34,6 +34,15 @@ class GetRequest(UrlRequest):
         return super().do_request()
 
 
+class GetStreamRequest(UrlRequest):
+
+    def __init__(self, url, headers):
+        super().__init__("GET", url, headers)
+
+    def do_request(self):
+        return super().do_request()
+
+
 class PostRequest(UrlRequest):
 
     def __init__(self, url, headers, data):
